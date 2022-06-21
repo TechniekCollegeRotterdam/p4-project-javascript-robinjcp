@@ -1,1 +1,3 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7942715&assignment_repo_type=AssignmentRepo)
+
+Ik heb de game pong gemaakt, de bedoeling van de game is om te zorgen dat je het balletje zo lang mogelijk heen en weer kan laten gaan zonder dat hij aan jou kant de muur raakt. Als hij bij jou de muur raakt heb je verloren en krijgt de AI een punt, maar als jij de muur raakt bij de AI krijg jij een punt.

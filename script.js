@@ -1,12 +1,14 @@
-import Ball from "./Ball.js"
-import Paddle from "./Paddle.js"
+import Ball from "./ball.js"
+import Paddle from "./paddle.js"
 
+//variabelen//
 const ball = new Ball(document.getElementById("ball"))
 const playerPaddle = new Paddle(document.getElementById("player-paddle"))
 const computerPaddle = new Paddle(document.getElementById("computer-paddle"))
 const playerScoreElem = document.getElementById("player-score")
 const computerScoreElem = document.getElementById("computer-score")
 
+//Hiermee wordt de paddle op de bal afgestemd, om hem zo te volgen//
 let lastTime
 function update(time) {
   if (lastTime != null) {
@@ -26,11 +28,12 @@ function update(time) {
   window.requestAnimationFrame(update)
 }
 
+//dit zorgt ervoor dat de bal terug beweegt als de paddles hem raken//
 function isLose() {
   const rect = ball.rect()
   return rect.right >= window.innerWidth || rect.left <= 0
 }
-
+//if/else statements//
 function handleLose() {
   const rect = ball.rect()
   if (rect.right >= window.innerWidth) {
@@ -42,6 +45,7 @@ function handleLose() {
   computerPaddle.reset()
 }
 
+//dit zorgt voor de verbinding met de muis zodat de bal beweegt//
 document.addEventListener("mousemove", e => {
   playerPaddle.position = (e.y / window.innerHeight) * 100
 })

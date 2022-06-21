@@ -62,6 +62,7 @@ function randomNumberBetween(min, max) {
   return Math.random() * (max - min) + min
 }
 
+//dit zorgt ervoor dat de bal teruggaat naar de andere kant na het raken ervan//
 function isCollision(rect1, rect2) {
   return (
     rect1.left <= rect2.right &&

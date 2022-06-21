@@ -1,12 +1,13 @@
 //snelheid van het bewegen van de paddles//
 const SPEED = 0.02
 
+// positie van de paddles//
 export default class Paddle {
   constructor(paddleElem) {
     this.paddleElem = paddleElem
     this.reset()
   }
-// positie van de paddles//
+
   get position() {
     return parseFloat(
       getComputedStyle(this.paddleElem).getPropertyValue("--position")
